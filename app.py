@@ -76,6 +76,5 @@ def classify(hashtag, desc):
 @app.route("/classify", methods=['POST'])
 @cross_origin()
 def classifer_api():
-    print(request.data)
     data = json.loads(request.data)
     return json.dumps(classify(data['hashtag'], data['description']))
